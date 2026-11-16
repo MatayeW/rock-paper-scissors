@@ -31,11 +31,15 @@ h1 {
     font-size: 5rem;
     margin: 30px 0;
 }
+/* Score display styling */
+.scoreDisplay {
+    font-size: 2rem;
+}
 
 /* win text to be green, lose text to be red */
-.greenText {
+.greenText, #playerScoreDisplay {
     color: green;
 }
-.redText {
+.redText, #computerScoreDisplay {
     color: red;
 }

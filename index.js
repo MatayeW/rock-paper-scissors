@@ -6,6 +6,12 @@ const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
+//  score display functionality
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+let playerScore = 0;
+let computerScore = 0;
+
 // function that accepts argument (player choice)
 function playGame(playerChoice) {
     // declare computer choice within func to be updated every time new game is played
@@ -39,9 +45,13 @@ function playGame(playerChoice) {
     switch(result) {
         case "YOU WIN!":
             resultDisplay.classList.add("greenText");
+            playerScore++;
+            playerScoreDisplay.textContent = playerScore;
             break;
         case "YOU LOSE!":
             resultDisplay.classList.add("redText");
+            computerScore++;
+            computerScoreDisplay.textContent = computerScore;
             break;
     }
 }
